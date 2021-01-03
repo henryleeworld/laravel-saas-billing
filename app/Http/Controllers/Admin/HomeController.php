@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Payment;
+use App\Models\Payment;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 class HomeController
@@ -19,7 +19,7 @@ class HomeController
         $chart_options = [
             'chart_title'         => 'Revenue by day',
             'report_type'         => 'group_by_date',
-            'model'               => 'App\Payment',
+            'model'               => 'App\Models\Payment',
             'group_by_field'      => 'created_at',
             'group_by_period'     => 'day',
             'aggregate_function'  => 'sum',
@@ -39,7 +39,7 @@ class HomeController
         $paymentsTable = [
             'chart_title'    => 'Last Payments',
             'chart_type'     => 'latest_entries',
-            'model'          => 'App\\Payment',
+            'model'          => 'App\\Models\\Payment',
             'column_class'   => 'col-md-6',
             'entries_number' => '5',
             'fields'         => [

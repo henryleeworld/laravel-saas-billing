@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Country;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CheckoutRequest;
-use App\Payment;
-use App\Role;
+use App\Models\Country;
+use App\Models\Payment;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Stripe\Coupon;
 use Stripe\SetupIntent;
