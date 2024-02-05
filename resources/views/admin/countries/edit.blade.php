@@ -10,7 +10,7 @@
         <form method="POST" action="{{ route("admin.countries.update", [$country->id]) }}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="name">{{ trans('cruds.country.fields.name') }}</label>
                 <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', $country->name) }}" required>
                 @if($errors->has('name'))
@@ -20,7 +20,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.country.fields.name_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="short_code">{{ trans('cruds.country.fields.short_code') }}</label>
                 <input class="form-control {{ $errors->has('short_code') ? 'is-invalid' : '' }}" type="text" name="short_code" id="short_code" value="{{ old('short_code', $country->short_code) }}" required>
                 @if($errors->has('short_code'))
@@ -30,7 +30,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.country.fields.short_code_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-0">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

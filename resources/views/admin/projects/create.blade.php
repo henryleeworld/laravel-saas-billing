@@ -9,7 +9,7 @@
     <div class="card-body">
         <form method="POST" action="{{ route("admin.projects.store") }}" enctype="multipart/form-data">
             @csrf
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="name">{{ trans('cruds.project.fields.name') }}</label>
                 <input class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name" id="name" value="{{ old('name', '') }}">
                 @if($errors->has('name'))
@@ -19,7 +19,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.project.fields.name_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-0">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

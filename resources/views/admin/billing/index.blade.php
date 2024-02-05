@@ -42,21 +42,21 @@
                 <input type="hidden" name="discount_id" id="discount_id" value="" />
 
                 <div class="row">
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 mb-3">
                         <label for="billing_name">{{ trans('saas.checkout.billing_name') }}</label>
                         <input type="text" class="form-control" name="billing_name" id="billing_name" required />
                     </div>
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 mb-3">
                         <label for="address_1">{{ trans('saas.checkout.address_line_1') }}</label>
                         <input type="text" class="form-control" name="address_1" id="address_1" required />
                     </div>
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 mb-3">
                         <label for="address_2">{{ trans('saas.checkout.address_line_2') }}</label>
                         <input type="text" class="form-control" name="address_2" id="address_2" />
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 mb-3">
                         <label for="country_id">{{ trans('saas.country.title') }}</label>
                         <select class="form-control" name="country_id" id="country_id" required>
                             @foreach($countries as $country)
@@ -68,11 +68,11 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 mb-3">
                         <label for="city">{{ trans('saas.country.city') }}</label>
                         <input type="text" class="form-control" name="city" id="city" required />
                     </div>
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 mb-3">
                         <label for="postcode">{{ trans('saas.country.postcode') }}</label>
                         <input type="text" class="form-control" name="postcode" id="postcode" required />
                     </div>
@@ -80,10 +80,10 @@
                 <hr />
                 <label for="discount_code">{{ trans('saas.discount_code.title') }}</label>
                 <div class="row">
-                    <div class="col-md-4 form-group">
+                    <div class="col-md-4 mb-3">
                         <input type="text" class="form-control" id="discount_code" />
                     </div>
-                    <div class="col form-group">
+                    <div class="col mb-0">
                         <button type="button" class="btn btn-primary" id="apply-discount">{{ trans('saas.discount_code.apply_code') }}</button>
                     </div>
                 </div>

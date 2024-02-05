@@ -80,7 +80,7 @@
         @if(!auth()->user()->isAdmin)
             <li class="c-sidebar-nav-item">
                 <a class="c-sidebar-nav-link" href="{{ route('admin.billing.index') }}">
-                    <i class="fas fa-fw fa-money c-sidebar-nav-icon">
+                    <i class="fas fa-fw fa-money-bill c-sidebar-nav-icon">
                     </i>
                     {{ trans('global.billing.menu') }}
                 </a>

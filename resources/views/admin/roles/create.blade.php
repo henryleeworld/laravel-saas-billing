@@ -9,7 +9,7 @@
     <div class="card-body">
         <form method="POST" action="{{ route("admin.roles.store") }}" enctype="multipart/form-data">
             @csrf
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="title">{{ trans('cruds.role.fields.title') }}</label>
                 <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', '') }}" required>
                 @if($errors->has('title'))
@@ -19,7 +19,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.role.fields.title_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="stripe_plan_id">{{ trans('cruds.role.fields.stripe_plan_id') }}</label>
                 <input class="form-control {{ $errors->has('stripe_plan_id') ? 'is-invalid' : '' }}" type="text" name="stripe_plan_id" id="stripe_plan_id" value="{{ old('stripe_plan_id', '') }}">
                 @if($errors->has('stripe_plan_id'))
@@ -29,7 +29,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.role.fields.stripe_plan_id_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="price">{{ trans('cruds.role.fields.price') }}</label>
                 <input class="form-control {{ $errors->has('price') ? 'is-invalid' : '' }}" type="number" name="price" id="price" value="{{ old('price', '') }}" step="1">
                 @if($errors->has('price'))
@@ -39,7 +39,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.role.fields.price_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="permissions">{{ trans('cruds.role.fields.permissions') }}</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn btn-info btn-xs select-all" style="border-radius: 0">{{ trans('global.select_all') }}</span>
@@ -57,7 +57,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.role.fields.permissions_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-0">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
