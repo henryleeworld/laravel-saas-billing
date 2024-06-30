@@ -9,7 +9,7 @@
     <div class="card-body">
         <div class="mb-3">
             <div class="mb-3">
-                <a class="btn btn-default" href="{{ route('admin.roles.index') }}">
+                <a class="btn btn-light" href="{{ route('admin.roles.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
@@ -60,7 +60,7 @@
                 </tbody>
             </table>
             <div class="mb-0">
-                <a class="btn btn-default" href="{{ route('admin.roles.index') }}">
+                <a class="btn btn-light" href="{{ route('admin.roles.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
